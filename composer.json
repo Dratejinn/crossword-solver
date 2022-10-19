@@ -1,0 +1,19 @@
+{
+    "name": "dratejinn/crossworldsolver",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Freek van der Veer",
+            "email": "freek_vanderveer@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4" : {
+            "Dratejinn\\": "src/"
+        }
+    },
+    "require": {
+        "monolog/monolog": "^3.2"
+    }
+}
