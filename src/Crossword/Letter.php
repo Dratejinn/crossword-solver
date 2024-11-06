@@ -9,9 +9,9 @@ use Dratejinn\Grid\Tile;
 
 class Letter extends Tile {
 
-    private $_letter = NULL;
+    private ?string $_letter = NULL;
 
-    private $_searchedDirections = [];
+    private array $_searchedDirections = [];
 
     public function setLetter(string $letter) : void {
         if (strlen($letter) !== 1) {

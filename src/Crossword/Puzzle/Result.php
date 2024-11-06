@@ -45,4 +45,18 @@ class Result {
     public function getAnswers() : array {
         return $this->_answers;
     }
+
+    /**
+     * @return Question[]
+     */
+    public function getUnansweredQuestions() : array {
+        return array_filter($this->_questions, function (Question $question) : bool {
+           foreach ($this->_answers as $answer) {
+               if ($answer->question === $question) {
+                   return FALSE;
+               }
+           }
+           return TRUE;
+        });
+    }
 }

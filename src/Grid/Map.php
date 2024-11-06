@@ -60,4 +60,12 @@ class Map {
     public function getColumnIterator() : \Iterator {
         return new \ArrayIterator($this->_columns);
     }
+
+    public function getRowCount() : int {
+        return count($this->_rows);
+    }
+
+    public function getColumnCount() : int {
+        return count($this->_columns);
+    }
 }

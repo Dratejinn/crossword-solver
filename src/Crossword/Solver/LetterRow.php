@@ -12,11 +12,11 @@ class LetterRow {
     /**
      * @var Letter[]
      */
-    private $_letters = [];
+    private array $_letters = [];
 
-    private $_string;
+    private string $_string;
 
-    private $_revsersedString;
+    private string $_revsersedString;
 
     public function __construct(array $letters, Direction $direction) {
         $letterArr = [];

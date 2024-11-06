@@ -45,6 +45,7 @@ class Solver implements LoggerAwareInterface {
 
         $firstRow = $puzzle->getRowAtPosition(0);
         $firstColumn = $puzzle->getColumnAtPosition(0);
+        $lastRow = $puzzle->getRowAtPosition($puzzle->getRowCount() -1);
 
         $unansweredQuestions = $this->_questions;
 
@@ -56,6 +57,13 @@ class Solver implements LoggerAwareInterface {
         }
 
         foreach ($firstColumn as $letter) {
+            $this->_processLetter($letter, $unansweredQuestions);
+            if (empty($unansweredQuestions)) {
+                break;
+            }
+        }
+
+        foreach ($lastRow as $letter) {
             $this->_processLetter($letter, $unansweredQuestions);
             if (empty($unansweredQuestions)) {
                 break;
